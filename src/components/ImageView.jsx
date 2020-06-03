@@ -10,6 +10,7 @@ const StyledImageView = styled.div`
     width: 400px;
     height: 400px;
     border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
 `;
 
