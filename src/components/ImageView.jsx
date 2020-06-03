@@ -5,8 +5,6 @@ const StyledImageView = styled.div`
   position: relative;
   width: 400px;
   height: 400px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
 
   img {
     width: 400px;

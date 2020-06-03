@@ -31,7 +31,7 @@ const Pagination = React.memo(({ pageCount, currentPage, onPageClick, className 
           key={i}
           selected={currentPage === i}
           onClick={() => { onPageClick(i); }}
-          text={i}
+          text={i + 1}
         />
       );
     }

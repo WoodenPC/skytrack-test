@@ -4,8 +4,14 @@ import { FETCH_IMAGE, ADD_IMAGE } from './actionTypes/images';
 import { getImageUrlAsync } from './api';
 
 function* fetchImage() {
-  const { id, url, time, title} = yield call(getImageUrlAsync);
-  yield put({ type: ADD_IMAGE, id, url, time, title });
+  try {
+    const { id, url, time, title} = yield call(getImageUrlAsync);
+    yield put({ type: ADD_IMAGE, id, url, time, title });
+  }
+  catch(e) {
+    console.error(e);
+    alert('Не удалось загрузить картинку с api');
+  }
 }
 
 export function* apiSaga() {
