@@ -6,11 +6,12 @@ const apiUrl = 'https://api.giphy.com/v1/gifs/random?api_key=gR30u9O8KPOanwIQupH
 export const getImageUrlAsync = async () => {
   const res = await axios.get(apiUrl);
   const { data } = res;
-  const { images, id, import_datetime, title } = data.data;
+  const { images, id, title } = data.data;
+  const date = new Date().toLocaleString();
   return {
     url: images.original.url,
     id,
-    time: import_datetime,
+    time: date,
     title
   };
 }
